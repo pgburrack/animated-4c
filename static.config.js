@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+/* eslint-disable no-unused-vars */
 export default {
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
     <Html lang="en-US">
