@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { ServerStyleSheet } from 'styled-components';
 
 /* eslint-disable no-unused-vars */
 export default {
@@ -16,12 +17,19 @@ export default {
           href="https://fonts.googleapis.com/css?family=Spectral:300,400,500,600,700,800"
           rel="stylesheet"
         />
+        {renderMeta.styleTags}
       </Head>
       <Body>{children}</Body>
     </Html>
   ),
+  renderToHtml: (render, Comp, meta) => {
+    const sheet = new ServerStyleSheet();
+    const html = render(sheet.collectStyles(<Comp />));
+    meta.styleTags = sheet.getStyleElement();
+    return html;
+  },
   getSiteData: () => ({
-    title: 'React Static'
+    title: 'Yihan ZHOU'
   }),
   getRoutes: async () => {
     const { data: posts } = await axios.get(
@@ -31,6 +39,10 @@ export default {
       {
         path: '/',
         component: 'src/containers/Home'
+      },
+      {
+        path: '/projects',
+        component: 'src/containers/Projects'
       },
       {
         path: '/about',
