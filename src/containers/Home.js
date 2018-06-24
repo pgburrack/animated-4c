@@ -1,7 +1,7 @@
-import React from 'react'
-import { withSiteData, Head } from 'react-static'
+import React from 'react';
+import { withSiteData, Head } from 'react-static';
 //
-import logoImg from '../logo.png'
+import logoImg from '../logo.png';
 
 export default withSiteData(({ title }) => (
   <div>
@@ -9,4 +9,4 @@ export default withSiteData(({ title }) => (
     <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
     <img src={logoImg} alt="" />
   </div>
-))
+));
