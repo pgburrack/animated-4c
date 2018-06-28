@@ -63,6 +63,10 @@ export default {
         }))
       },
       {
+        path: '/projects/:id',
+        component: 'src/containers/Project'
+      },
+      {
         is404: true,
         component: 'src/containers/404'
       }
