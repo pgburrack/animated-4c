@@ -1,60 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from "react-static";
+import { Link } from 'react-static';
 import styled from 'styled-components';
+import { display } from 'styled-system';
+import { Row, Column } from '../grid';
 
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4.8rem;
-  width: 100%;
-  background-color: #fcfcfc;
+import Logo from '../header/Logo';
+import MenuLinks from '../header/MenuLinks';
+import Hamburger from '../header/hamburger';
+
+const FlexHeader = styled(Row)`
   height: 80px;
-  
-  a {
-    color: #071d2c;
-    padding: 1rem;
-    display: inline-block;
-  }
-`
+  font-family: Open Sans, sans-serif;
+`;
 
-const Logo = styled.h1`
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: 2px;
-  text-align: center;
-`
+const Nav = styled(Column)`
+  ${display};
+`;
 
-const Section = styled.section``
+const MobileNav = styled(Nav)``;
 
-const HeaderLink = styled(Link)`
-  font-size: 2rem;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.2;
-  letter-spacing: 2px;
-  color: #7f7f7f;
-`
-
-const Header = (props) => {
-  return (
-    <Nav>
-      <Section>
-        <Link exact to="/">
-          <Logo>YIHAN ZHOU</Logo>
-        </Link>
-      </Section>
-      <Section>
-        <HeaderLink to="/about">About</HeaderLink>
-        <HeaderLink to="/blog">Email</HeaderLink>
-      </Section>
+const Header = () => (
+  <FlexHeader
+    is="header"
+    height="80px"
+    alignItems="center"
+    justifyContent="space-between">
+    <Column>
+      <Link exact to="/">
+        <Logo />
+      </Link>
+    </Column>
+    <Nav is="nav" display={['none', 'none', 'flex', 'flex']}>
+      <MenuLinks />
     </Nav>
-  );
-};
+    <MobileNav display={['flex', 'flex', 'none', 'none']}>
+      <Hamburger />
+    </MobileNav>
+  </FlexHeader>
+);
 
 Header.propTypes = {};
 Header.defaultProps = {};

@@ -7,6 +7,7 @@ const YihanAsLogo = styled.h1`
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
+  color: ${props => props.theme.colors['pine-green']};
 `;
 
 const Logo = () => <YihanAsLogo>YIHAN ZHOU</YihanAsLogo>;

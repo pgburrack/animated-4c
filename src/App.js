@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Router, Route, cleanPath } from 'react-static';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { easeQuadOut } from 'd3-ease';
 import { NodeGroup } from 'react-move';
 import { withContext, getContext } from 'recompose';
@@ -11,6 +11,7 @@ import Routes from 'react-static-routes';
 import './app.css';
 
 import Header from './shared/Header';
+import { theme, Container } from './grid';
 
 // The magic :)
 const AnimatedRoutes = getContext({
@@ -110,63 +111,16 @@ const AnimatedRoutes = getContext({
   />
 ));
 
-/**
- * YIHan project
- * has 3 sizes:
- * 1440
- * 1280
- * 786
- * 360
- */
-/* TODO:
-*  define grid - check what grid to choose
-*  questions:
-*   - should i have a grid system ? are there other options
-*   ---------------------------------------
-*  options:
-*   write my own grid system:
-*   pros:
-*    - will learn from this
-*    - flexible
-*   cons:
-*    - take time
-*    - bugs
-* -----------------------------------------
-*   components that defines brake points
-*    cons:
-*
-*    using grid-styled:
-*    pros:
-*     - ready react components
-*     - alot of people like this
-*
-*    cons:
-*     - need to learn about there api
-* ------------------------------------------
-* using react-responsive
-*  this is react helper for defining media queries
-*  this is not using grid
-*
-*  question: should i just use it for hide and show content ?
-*
-* ------------------------------------------
-* impromptu-react-animated-header
-* pros: give me the behavior i need to the header
-* cons: this is only the header
-* */
-
-const Content = styled.main`
-  padding: 0 48px;
-`;
-
 const App = () => (
   <Router>
-    <div>
-      <Header />
-      <Content>
-        <Routes component={AnimatedRoutes} />
-      </Content>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <Container>
+          <Header />
+          <Routes component={AnimatedRoutes} />
+        </Container>
+      </Fragment>
+    </ThemeProvider>
   </Router>
 );
 

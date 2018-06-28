@@ -1,12 +1,12 @@
 import React from 'react';
 import { withSiteData, Head } from 'react-static';
-//
+import { Flex, Box } from 'grid-styled';
 import logoImg from '../logo.png';
 
 export default withSiteData(({ title }) => (
-  <div>
+  <Flex flexDirection={['column', 'column', 'row', 'row']}>
     <Head>{title} s</Head>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-    <img src={logoImg} alt="" />
-  </div>
+    <Box mb={4} pr={[0, 4, 4, 4]} width={[1, 1, 1 / 2]} />
+    <Box mb={4} pr={[0, 4, 4, 4]} width={[1, 1, 1 / 2]} />
+  </Flex>
 ));
