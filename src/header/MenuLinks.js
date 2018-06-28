@@ -1,20 +1,19 @@
 import React, { Fragment } from 'react';
+import { withTheme } from 'styled-components';
 import MenuLink from './MenuLink';
 
-const fontSizes = ['14px', '14px', '14px', '14px', '20px', '20px'];
-
-const MenuLinks = () => (
+const MenuLinks = ({ theme }) => (
   <Fragment>
-    <MenuLink fontSize={fontSizes} to="/projects">
+    <MenuLink fontSize={theme.menuFontSizes} to="/projects">
       Projects
     </MenuLink>
-    <MenuLink fontSize={fontSizes} to="/about">
+    <MenuLink fontSize={theme.menuFontSizes} to="/about">
       About
     </MenuLink>
-    <MenuLink fontSize={fontSizes} to="/blog">
+    <MenuLink fontSize={theme.menuFontSizes} to="/blog">
       Email
     </MenuLink>
   </Fragment>
 );
 
-export default MenuLinks;
+export default withTheme(MenuLinks);

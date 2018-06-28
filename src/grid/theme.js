@@ -82,6 +82,8 @@ const colWidthPer = [
   xxlargeColumn / (xxlargeBreakpoint - xxlargeBreakpoint * 2)
 ];
 
+const menuFontSizes = ['14px', '14px', '14px', '14px', '20px', '20px'];
+
 const theme = {
   breakpoints,
   colors: {
@@ -94,7 +96,8 @@ const theme = {
   containerMargins,
   numOfCols,
   colWidth,
-  colWidthPer
+  colWidthPer,
+  menuFontSizes
 };
 
 export default theme;

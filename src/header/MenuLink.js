@@ -10,7 +10,7 @@ export default styled(Link)`
   color: #7f7f7f;
   margin-right: 36px;
   line-height: 1.2;
-
+  transition: font-size 0.3s;
   &:last-child {
     margin-right: 0;
   }
