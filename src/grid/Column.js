@@ -7,8 +7,7 @@ const Column = props => {
   const boxProps = { ...rest, display: 'block', px: [0, 1, 2, 3, 4, 5] };
 
   if (col) {
-    const width = col ? theme.colWidthPer.map(width => width * col) : null;
-    boxProps.width = width;
+    boxProps.width = col ? theme.colWidthPer.map(width => width * col) : null;
     boxProps.flex = 'none';
   } else if (auto) {
     boxProps.flex = '0 0 auto';
@@ -28,6 +27,5 @@ Column.defaultProps = {
   auto: true
 };
 
-Column;
 const ColumnWithTheme = withTheme(Column);
 export default ColumnWithTheme;

@@ -74,19 +74,21 @@ const colWidth = [
 ];
 
 const colWidthPer = [
-  xSmallColumn / xSmallBreakpoint,
-  smallColumn / smallBreakpoint,
-  mediumColumn / mediumBreakpoint,
-  largeColumn / largeBreakpoint,
-  xlargeColumn / xlargeBreakpoint,
-  xxlargeColumn / xxlargeBreakpoint
+  xSmallColumn / (xSmallBreakpoint - xSmallMargin * 2),
+  smallColumn / (smallBreakpoint - smallMargin * 2),
+  mediumColumn / (mediumBreakpoint - mediumMargin * 2),
+  largeColumn / (largeBreakpoint - largeBreakpoint * 2),
+  xlargeColumn / (xlargeBreakpoint - xlargeBreakpoint * 2),
+  xxlargeColumn / (xxlargeBreakpoint - xxlargeBreakpoint * 2)
 ];
 
 const theme = {
   breakpoints,
   colors: {
     black: '#2b2b2b',
-    'pine-green': '#071d2c'
+    'pine-green': '#071d2c',
+    'greyish-brown': '#474747',
+    'brownish-grey': '#636363'
   },
   space,
   containerMargins,
