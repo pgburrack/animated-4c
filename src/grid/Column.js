@@ -7,7 +7,9 @@ const Column = props => {
   const boxProps = { ...rest, display: 'block', px: [0, 1, 2, 3, 4, 5] };
 
   if (col) {
-    boxProps.width = col ? theme.colWidthPer.map(width => width * col) : null;
+    boxProps.width = col
+      ? theme.colWidthPer.map((width, i) => `${width * col[i] * 100}%`)
+      : null;
     boxProps.flex = 'none';
   } else if (auto) {
     boxProps.flex = '0 0 auto';

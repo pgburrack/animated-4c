@@ -73,13 +73,22 @@ const colWidth = [
   xxlargeColumn
 ];
 
+const margin = [
+  xSmallMargin * 2,
+  smallMargin * 2,
+  mediumMargin * 2,
+  largeMargin * 2,
+  xlargeMargin * 2,
+  xxlargeMargin * 2
+];
+
 const colWidthPer = [
-  xSmallColumn / (xSmallBreakpoint - xSmallMargin * 2),
-  smallColumn / (smallBreakpoint - smallMargin * 2),
-  mediumColumn / (mediumBreakpoint - mediumMargin * 2),
-  largeColumn / (largeBreakpoint - largeBreakpoint * 2),
-  xlargeColumn / (xlargeBreakpoint - xlargeBreakpoint * 2),
-  xxlargeColumn / (xxlargeBreakpoint - xxlargeBreakpoint * 2)
+  xSmallColumn / (xSmallBreakpoint - margin[0]),
+  smallColumn / (smallBreakpoint - margin[1]),
+  mediumColumn / (mediumBreakpoint - margin[2]),
+  largeColumn / (largeBreakpoint - margin[3]),
+  xlargeColumn / (xlargeBreakpoint - margin[4]),
+  xxlargeColumn / (xxlargeBreakpoint - margin[5])
 ];
 
 const menuFontSizes = ['14px', '14px', '14px', '14px', '20px', '20px'];
