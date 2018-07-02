@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fontSize, lineHeight, textAlign } from 'styled-system';
+import { fontSize, lineHeight, textAlign, maxHeight } from 'styled-system';
 import { Column, Row } from '../grid';
 
 const Title = styled.h1`
@@ -25,7 +25,21 @@ const HanselGretelIsA = styled(Column)`
   ${lineHeight};
 `;
 
-// col={[4, 8, 7, 9, 6, 6]}
+const ProjectImg = styled.img`
+  ${maxHeight};
+`;
+
+const ImgDescription = styled.figcaption`
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: ${props => props.theme.colors['brownish-grey']};
+`;
+
 export default () => (
   <div>
     <Row
@@ -66,6 +80,19 @@ export default () => (
         </Title>
       </Column>
     </Row>
-    <p>Project</p>
+    <Row alignItems="center" justifyContent="center">
+      <Column width="100%">
+        <figure>
+          <ProjectImg
+            maxHeight={['200px', '346px', '440px', '856px']}
+            alt="project display"
+            src="https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg"
+          />
+          <ImgDescription>
+            This is the description for this image above.
+          </ImgDescription>
+        </figure>
+      </Column>
+    </Row>
   </div>
 );
