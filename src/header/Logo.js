@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const YihanAsLogo = styled.h1`
+const YihanAsLogo = styled.strong`
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
