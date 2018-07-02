@@ -29,6 +29,7 @@ const HanselGretelIsA = styled(Column)`
 export default () => (
   <div>
     <Row
+      mb={['40px', '40px', '40px', '40px', '24px', '48px']}
       alignItems={[
         'flex-end',
         'flex-end',
