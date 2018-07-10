@@ -57,12 +57,10 @@ const AnimatedRoutes = getContext({
           keyAccessor={d => d.id}
           start={() => ({
             opacity: [0],
-            scale: 1,
-            translateY: [10]
+            scale: 1
           })}
           enter={() => ({
             opacity: [1],
-            translateY: [0],
             timing: { duration: 200, delay: 200, ease: easeQuadOut }
           })}
           update={() => ({
@@ -70,12 +68,11 @@ const AnimatedRoutes = getContext({
           })}
           leave={() => ({
             opacity: [0],
-            translateY: [-10],
             timing: { duration: 200, ease: easeQuadOut }
           })}>
           {nodes => (
             <div style={{ position: 'relative' }}>
-              {nodes.map(({ key, data, state: { opacity, translateY } }) => {
+              {nodes.map(({ key, data, state: { opacity } }) => {
                 // Here, we override the router context with the one that was
                 // passed with each route
                 const PreservedRouterContext = withContext(
@@ -91,12 +88,6 @@ const AnimatedRoutes = getContext({
                   <PreservedRouterContext
                     key={key}
                     style={{
-                      position: 'absolute',
-                      top: 0,
-                      right: 0,
-                      bottom: 0,
-                      left: 0,
-                      transform: `translateY(${translateY}px)`,
                       opacity
                     }}>
                     <data.Comp {...data.props} />
