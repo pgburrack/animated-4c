@@ -14,7 +14,7 @@ export default {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Spectral:300,400,500,600,700,800"
+          href="https://fonts.googleapis.com/css?family=Spectral:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
           rel="stylesheet"
         />
         {renderMeta.styleTags}
