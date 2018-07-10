@@ -22,6 +22,7 @@ const MobileNav = styled(Nav)``;
 
 const Header = () => (
   <FlexHeader
+    mb={['89px', '80px', '48px', '48px', '64px', '64px']}
     is="header"
     height="80px"
     alignItems="center"
