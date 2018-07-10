@@ -108,9 +108,11 @@ const DescriptionRow = () => (
 
         <HowCouldContent
           mb={MARGIN_BOTTOM}
+          mx="auto"
           display="block"
           lineHeight={[1.2, 1.2, 1.2, 1.2, 1.25, 1.25]}
-          fontSize={['20px', '20px', '20px', '20px', '32px', '32px']}>
+          fontSize={['20px', '20px', '20px', '20px', '32px', '32px']}
+          width={[1, 6 / 8, 6 / 8, 8 / 12, 1, 1]}>
           “Audio player software is used to play recordings in one of the many
           formats available for computers today. And we need another line for
           showing layout.”
