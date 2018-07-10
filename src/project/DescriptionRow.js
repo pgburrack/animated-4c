@@ -1,5 +1,5 @@
 import React from 'react';
-import { display, space } from 'styled-system';
+import { display, space, width } from 'styled-system';
 import ProjectImg from './ProjectImg';
 import { Column, Row } from '../grid';
 import Text from '../shared/Text';
@@ -11,14 +11,26 @@ const HowCouldContent = Text.extend`
   letter-spacing: normal;
   ${display};
   ${space};
+  ${width};
 `;
 
 const MARGIN_BOTTOM = '32px;';
 
+const content = `How could content creators tell a story keeping the viewers engaged,
+          in a 360 environment where viewers have full of freedom to explore?`;
 const DescriptionRow = () => (
   <Row flexWrap="wrap">
     <Column mb="32px" width={[1, 1, 1, 1, 1 / 2, 1 / 2]}>
       <div>
+        <HowCouldContent
+          mb={MARGIN_BOTTOM}
+          mx="auto"
+          display={['block', 'block', 'block', 'block', 'none', 'none']}
+          lineHeight={[1.2, 1.2, 1.2, 1.2, 1.25, 1.25]}
+          fontSize={['20px', '20px', '20px', '20px', '32px', '32px']}
+          width={[1, 6 / 8, 6 / 8, 8 / 12, 1, 1]}>
+          {content}
+        </HowCouldContent>
         <p>
           Audio player software is used to play back sound recordings in one of
           the many formats available for computers today. It can also play back
@@ -80,11 +92,10 @@ const DescriptionRow = () => (
       <div>
         <HowCouldContent
           mb={MARGIN_BOTTOM}
-          display="block"
+          display={['none', 'none', 'none', 'none', 'block', 'block']}
           lineHeight={[1.2, 1.2, 1.2, 1.2, 1.25, 1.25]}
           fontSize={['20px', '20px', '20px', '20px', '32px', '32px']}>
-          How could content creators tell a story keeping the viewers engaged,
-          in a 360 environment where viewers have full of freedom to explore?
+          {content}
         </HowCouldContent>
 
         <ProjectImg
