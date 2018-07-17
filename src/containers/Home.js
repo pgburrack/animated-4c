@@ -1,11 +1,16 @@
 import React from 'react';
 import { withSiteData, Head } from 'react-static';
-import { Flex, Box } from 'grid-styled';
+import { Column, Row } from '../grid';
+import Intro from '../home/Intro';
 
 export default withSiteData(({ title }) => (
-  <Flex flexDirection={['column', 'column', 'row', 'row']}>
-    <Head>{title} s</Head>
-    <Box mb={4} pr={[0, 4, 4, 4]} width={[1, 1, 1 / 2]} />
-    <Box mb={4} pr={[0, 4, 4, 4]} width={[1, 1, 1 / 2]} />
-  </Flex>
+  <Row
+    justifyContent="space-between"
+    flexDirection={['column', 'column', 'row', 'row']}>
+    <Head>{title} Home page</Head>
+    <Column width={4 / 12}>1</Column>
+    <Column width={4 / 12}>
+      <Intro />
+    </Column>
+  </Row>
 ));

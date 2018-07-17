@@ -104,7 +104,8 @@ const theme = {
     'greyish-brown': '#474747',
     'brownish-grey': '#636363',
     slate: '#425a6e',
-    whitish: '#f9f9f9'
+    whitish: '#f9f9f9',
+    perrywinkle: '#76b6df'
   },
   space,
   containerMargins,
