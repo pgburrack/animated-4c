@@ -52,7 +52,8 @@ const containerMargins = [
   mediumMargin,
   largeMargin,
   xlargeMargin,
-  xxlargeMargin
+  xxlargeMargin,
+  'auto'
 ];
 
 const numOfCols = [

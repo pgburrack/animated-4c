@@ -7,7 +7,8 @@ import {
   fontSize,
   order,
   alignSelf,
-  display
+  display,
+  maxWidth
 } from 'styled-system';
 import tag from 'clean-tag';
 import theme from './theme';
@@ -22,7 +23,8 @@ const Box = styled(tag)(
   flex,
   order,
   alignSelf,
-  display
+  display,
+  maxWidth
 );
 
 export const Section = Box.withComponent(tag.section);
