@@ -1,75 +1,97 @@
 import React from 'react';
 
-import { Flex, Box } from 'grid-styled';
 import { lineHeight, width } from 'styled-system';
 import styled from 'styled-components';
 import tag from 'clean-tag';
+import about1 from '../images/about1.jpg';
+import about2 from '../images/about2.JPG';
+import { Row, Column } from '../grid';
 
-const Text = styled(Box)`
+const Text = styled(Column)`
   ${lineHeight};
 `;
 
 const Img = styled(tag.img)`
-  ${width};
+  width: 100%;
+  margin-bottom: 32px;
+`;
+
+const Paragraph = styled(tag.p)`
+  margin-bottom: 24px;
 `;
 
 export default () => (
-  <Flex flexDirection={['column', 'column', 'row', 'row']}>
-    <Box mb={4} pr={[0, 0, 4, 4]} width={[1, 1, 1 / 2]}>
-      <Img
-        width={['auto']}
-        alt="portfolio"
-        src="https://i.pinimg.com/originals/f3/db/3e/f3db3e372bfc65404f049bc6b4645fb4.jpg"
-      />
-    </Box>
+  <Row flexDirection={['column', 'column', 'row', 'row']}>
+    <Column mb={4} pr={[0, 0, 4, 4]} width={[1, 1, 1 / 2]}>
+      <Img alt="portfolio" src={about1} />
+      <Img alt="me" src={about2} />
+    </Column>
     <Text
       lineHeight="1.5"
       color="black"
       fontSize={[2, 2, 3]}
       width={[1, 1, 1 / 2]}>
-      Audio player software is used to play back sound recordings in one of the
-      many formats available for computers today. It can also play back music
-      CDs. There is audio player software that is native to the computer’s
-      operating system (Windows, Macintosh, and Linux) and there are web-based
-      audio players. This article discusses the local computer audio players.
-      Advantages of computer audio player software. The main advantage of a
-      computer audio player is that you can play your audio CDs and there is no
-      longer any need to have a separate CD player. However the capabilities of
-      the computer audio player go beyond just playing traditional music CDs.
-      You can also play sound clips in one of the many audio formats found in
-      the information technology industry today. The MP3 format is a standard
-      whereby a high rate of compression can be achieved on sound files allowing
-      the ability to store large numbers of them on hard disk. Another advantage
-      is when the computer audio player has ripping capability you can extract a
-      sample clip from the sound track for internet posting or emailing. Audio
-      players in the form of portable MP3 players like Apple’s iPod are
-      extremely advantageous due to their long battery life and capability to be
-      carried practically anywhere. Choosing and using a computer audio player
-      Windows comes with Windows Media Player already installed. Realplayer is a
-      free download as well. There are other free products such as Winamp
-      (Windows only). One important feature you want to look for when choosing
-      an audio player beyond what is packaged with your operating system is the
-      sound filtering capabilities. It should at least have a graphic equalizer
-      where you can adjust for poor quality sound files. Look for other features
-      like the ability to rip sound tracks and change the skins of the computer
-      audio player. The demand for the computer audio player Demand is driven by
-      price and the free audio players like Windows Media Player will remain
-      popular when it comes to playing audio on the computer. Where people are
-      spending more of their money is on the portable MP3 players like Apple’s
-      iPod. Apple makes a free computer audio player for the computer called
-      iTunes and it is used to organize play lists and transfer sound files to
-      the iPod player. Typically, you download iTunes and install it on your
-      computer and then you have an integrated environment to import different
-      types of Podcasts and audio for exporting to the iPod player itself. Plus
-      iTunes can be used as a standalone computer audio player. But more and
-      more you will see the demand for mobile computer audio players to increase
-      because of their convenience and portability. Demand is driven by price
-      and the free audio players like Windows Media Player will remain popular
-      when it comes to playing audio on the computer. Where people are spending
-      more of their money is on the portable MP3 players like Apple’s iPod.
-      Apple makes a free computer audio player for the computer called iTunes
-      and it is used to organize play lists and transfer sound files to the iPod
-      player.
+      <Paragraph>
+        This is Zhengzhou. I grew up in this artistic community on the outskirts
+        of the Chinese mainland city. I have vivid memories like this picture:
+        the Wind-worn arch with Suzhou Garden style,&nbsp;towering Wutong tree
+        along the street seemed to hold the weight of the sky, a group of people
+        gathering under them for painting, sculpturing or singing in a sunny
+        afternoon,&nbsp;quirky sparrows turned the hands of the clock forward,
+        wind it another year. Growing up in this community and a family loving
+        music and art, I have been lucky enough to always feel passionate for
+        art and design since I was a kid.&nbsp;
+      </Paragraph>
+      <Paragraph>
+        Design has been my experience knowledge since 2009 when I first went to
+        Guangzhou Academy of Fine arts to study graphic design, painting,
+        illustration and art history. After graduation,&nbsp;I decided to come
+        to New York, and study interaction design and creative coding in{' '}
+        <a href="https://www.newschool.edu/parsons/mfa-design-technology/">
+          MFA, design and technology at Parsons
+        </a>&nbsp;to expand my learning for design to more dimensions.
+      </Paragraph>
+      <Paragraph>
+        It gave me the chance to experience in interaction design, creative
+        coding, animation and game design, which have trained me to always think
+        solving design questions in service-oriented and multidisciplinary
+        perspectives.
+      </Paragraph>
+      <Paragraph>
+        I was lucky enough to meet a collective of friends and make fun games
+        and VR projects by founding{' '}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="http://phosphenedesigns.com">
+          Phosphene Designs
+        </a>&nbsp;(Find our game{' '}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="http://store.steampowered.com/app/566180/Fractal/">
+          Fractal
+        </a>{' '}
+        on stream). Meanwhile, I worked with a cross functional team in{' '}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="http://verizonopeninnovation.com/">
+          Verizon Verizon Open Innovation
+        </a>{' '}
+        researching 360 video creation. Right now I am part of the design team
+        in{' '}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="http://dailymotion.com">
+          Dailymotion
+        </a>, building and maintaining the design system for Project Leo.&nbsp;
+      </Paragraph>
+      <p>
+        Thank you for visiting my site, and checking out the works I have
+        done.&nbsp;Don't be a stranger, drop me a line for any thoughts.&nbsp;
+      </p>
     </Text>
-  </Flex>
+  </Row>
 );

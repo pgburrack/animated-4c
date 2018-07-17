@@ -1,7 +1,6 @@
 import React from 'react';
 import { withSiteData, Head } from 'react-static';
 import { Flex, Box } from 'grid-styled';
-import logoImg from '../logo.png';
 
 export default withSiteData(({ title }) => (
   <Flex flexDirection={['column', 'column', 'row', 'row']}>
