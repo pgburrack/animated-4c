@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import MenuLink from './MenuLink';
 
+const Anchor = MenuLink.withComponent('a');
+
 const MenuLinks = ({ theme, mb, onClick }) => (
   <Fragment>
     <MenuLink
@@ -19,9 +21,12 @@ const MenuLinks = ({ theme, mb, onClick }) => (
       to="/about">
       About
     </MenuLink>
-    <MenuLink onClick={onClick} fontSize={theme.menuFontSizes} to="/blog">
+    <Anchor
+      href="mailto:zhanonly@gmail.com"
+      target="_top"
+      fontSize={theme.menuFontSizes}>
       Email
-    </MenuLink>
+    </Anchor>
   </Fragment>
 );
 
