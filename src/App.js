@@ -106,7 +106,7 @@ const App = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <Fragment>
-        <Container maxWidth={theme.breakpoints[theme.breakpoints.length - 1]}>
+        <Container maxWidth={theme.maxWidth}>
           <Header />
           <Routes component={AnimatedRoutes} />
         </Container>
