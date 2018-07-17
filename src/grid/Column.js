@@ -4,7 +4,7 @@ import Box, { Footer, Header, Nav, Section } from './Box';
 
 const Column = props => {
   const { col, theme, auto, ...rest } = props;
-  const boxProps = { ...rest, display: 'block', px: [0, 1, 2, 3, 4, 5] };
+  const boxProps = { display: 'block', ...rest, px: [0, 1, 2, 3, 4, 5] };
 
   if (col) {
     boxProps.width = col

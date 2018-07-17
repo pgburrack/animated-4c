@@ -6,7 +6,8 @@ import {
   color,
   fontSize,
   order,
-  alignSelf
+  alignSelf,
+  display
 } from 'styled-system';
 import tag from 'clean-tag';
 import theme from './theme';
@@ -20,7 +21,8 @@ const Box = styled(tag)(
   color,
   flex,
   order,
-  alignSelf
+  alignSelf,
+  display
 );
 
 export const Section = Box.withComponent(tag.section);
@@ -41,7 +43,8 @@ Box.propTypes = {
   ...color.propTypes,
   ...flex.propTypes,
   ...order.propTypes,
-  ...alignSelf.propTypes
+  ...alignSelf.propTypes,
+  ...display.propTypes
 };
 
 export default Box;

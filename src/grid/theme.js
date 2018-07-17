@@ -91,7 +91,10 @@ const colWidthPer = [
   xxlargeColumn / (xxlargeBreakpoint - margin[5])
 ];
 
-const menuFontSizes = ['14px', '14px', '14px', '14px', '20px', '20px'];
+const menuFontSizes = ['14px', '20px', '20px', '20px', '20px', '20px'];
+const zIndex = {
+  menu: 1
+};
 
 const theme = {
   breakpoints,
@@ -99,14 +102,16 @@ const theme = {
     black: '#2b2b2b',
     'pine-green': '#071d2c',
     'greyish-brown': '#474747',
-    'brownish-grey': '#636363'
+    'brownish-grey': '#636363',
+    slate: '#425a6e'
   },
   space,
   containerMargins,
   numOfCols,
   colWidth,
   colWidthPer,
-  menuFontSizes
+  menuFontSizes,
+  zIndex
 };
 
 export default theme;

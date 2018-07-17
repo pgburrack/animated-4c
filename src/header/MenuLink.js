@@ -1,6 +1,6 @@
 import { Link } from 'react-static';
 import styled from 'styled-components';
-import { fontSize } from 'styled-system';
+import { fontSize, space } from 'styled-system';
 
 export default styled(Link)`
   font-weight: bold;
@@ -15,4 +15,5 @@ export default styled(Link)`
     margin-right: 0;
   }
   ${fontSize};
+  ${space};
 `;

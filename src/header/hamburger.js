@@ -1,30 +1,54 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { space, display } from 'styled-system';
+import { transform } from '../styled-system/customStyles';
 
-const Hamburger = ({ className }) => (
-  <svg
-    className={className}
-    width="32px"
-    height="32px"
-    viewBox="0 0 32 32"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg">
-    <title>menu icon</title>
-    <desc>Menu icon</desc>
-    <g
-      id="Symbols"
-      stroke="none"
-      strokeWidth="1"
-      fill="none"
-      fillRule="evenodd">
-      <g id="icon/menu">
-        <rect id="bg" x="0" y="0" width="32" height="32" />
-        <g id="menu" transform="translate(4.000000, 9.000000)" fill="#425A6E">
-          <rect id="Rectangle-4" x="0" y="11" width="24" height="3" />
-          <rect id="Rectangle-4-Copy" x="0" y="0" width="24" height="3" />
-        </g>
-      </g>
-    </g>
-  </svg>
+const Bun = styled.span`
+  width: 24px;
+  height: 2px;
+  background-color: ${props => props.theme.colors.slate};
+  ${space};
+  display: block;
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
+  ${transform};
+  position: absolute;
+`;
+
+const Sandwich = styled.button`
+  outline: 0;
+  background: none;
+  border: 0;
+  padding: 0;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  transform: translateZ(0);
+  position: relative;
+  ${display};
+`;
+
+// TODO: add onTouch event
+const Hamburger = ({ onClick, isOpen, display }) => (
+  <Sandwich display={display} onClick={onClick}>
+    <Bun
+      tf={`${isOpen ? 'rotate(45deg)' : 'translateY(-3.75px)'} translateZ(0)`}
+    />
+    <Bun
+      tf={`${isOpen ? 'rotate(-45deg)' : 'translateY(3.75px)'} translateZ(0)`}
+    />
+  </Sandwich>
 );
+
+Hamburger.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  display: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ])
+};
 
 export default Hamburger;

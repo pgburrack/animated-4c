@@ -1,19 +1,41 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import MenuLink from './MenuLink';
 
-const MenuLinks = ({ theme }) => (
+const MenuLinks = ({ theme, mb, onClick }) => (
   <Fragment>
-    <MenuLink fontSize={theme.menuFontSizes} to="/projects">
+    <MenuLink
+      onClick={onClick}
+      mb={mb}
+      fontSize={theme.menuFontSizes}
+      to="/projects">
       Projects
     </MenuLink>
-    <MenuLink fontSize={theme.menuFontSizes} to="/about">
+    <MenuLink
+      onClick={onClick}
+      mb={mb}
+      fontSize={theme.menuFontSizes}
+      to="/about">
       About
     </MenuLink>
-    <MenuLink fontSize={theme.menuFontSizes} to="/blog">
+    <MenuLink onClick={onClick} fontSize={theme.menuFontSizes} to="/blog">
       Email
     </MenuLink>
   </Fragment>
 );
 
+MenuLinks.defaultProps = {
+  mb: null,
+  onClick: () => {}
+};
+
+MenuLinks.propTypes = {
+  theme: PropTypes.object.isRequired,
+  mb: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
+  onClick: PropTypes.func
+};
 export default withTheme(MenuLinks);
