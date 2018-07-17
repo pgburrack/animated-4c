@@ -7,18 +7,10 @@ const Anchor = MenuLink.withComponent('a');
 
 const MenuLinks = ({ theme, mb, onClick }) => (
   <Fragment>
-    <MenuLink
-      onClick={onClick}
-      mb={mb}
-      fontSize={theme.menuFontSizes}
-      to="/projects">
+    <MenuLink mb={mb} fontSize={theme.menuFontSizes} to="/projects">
       Projects
     </MenuLink>
-    <MenuLink
-      onClick={onClick}
-      mb={mb}
-      fontSize={theme.menuFontSizes}
-      to="/about">
+    <MenuLink mb={mb} fontSize={theme.menuFontSizes} to="/about">
       About
     </MenuLink>
     <Anchor

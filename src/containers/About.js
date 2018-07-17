@@ -6,14 +6,10 @@ import tag from 'clean-tag';
 import about1 from '../images/about1.jpg';
 import about2 from '../images/about2.JPG';
 import { Row, Column } from '../grid';
+import Img from '../shared/Img';
 
 const Text = styled(Column)`
   ${lineHeight};
-`;
-
-const Img = styled(tag.img)`
-  width: 100%;
-  margin-bottom: 32px;
 `;
 
 const Paragraph = styled(tag.p)`

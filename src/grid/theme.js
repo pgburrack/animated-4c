@@ -103,7 +103,8 @@ const theme = {
     'pine-green': '#071d2c',
     'greyish-brown': '#474747',
     'brownish-grey': '#636363',
-    slate: '#425a6e'
+    slate: '#425a6e',
+    whitish: '#f9f9f9'
   },
   space,
   containerMargins,
