@@ -1,6 +1,5 @@
 # Yihan
 
-To get started in the CLI, run `react-static create` and use the `animated-routes` template.
 To get started after cloning this repo:
 
 1.  Install deps with `yarn` or `npm install`
