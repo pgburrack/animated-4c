@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Router, Route, /*cleanPath*/, Switch } from 'react-static';
+import { Router, Route /* cleanPath */, Switch } from 'react-static';
 import { ThemeProvider } from 'styled-components';
 // import { easeQuadOut } from 'd3-ease';
 // import { NodeGroup } from 'react-move';
