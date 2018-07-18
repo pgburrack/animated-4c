@@ -41,6 +41,9 @@ export default {
         component: 'src/containers/Home'
       },
       {
+        path: '/archives'
+      },
+      {
         path: '/projects',
         component: 'src/containers/Projects'
       },
