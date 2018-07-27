@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-static';
 import styled, { withTheme } from 'styled-components';
 import { display, space } from 'styled-system';
@@ -8,6 +7,7 @@ import { Row, Column } from '../grid';
 import Logo from '../header/Logo';
 import MenuLinks from '../header/MenuLinks';
 import Hamburger from '../header/hamburger';
+import HideForPaths from './HideForPaths';
 
 const FlexHeader = styled(Row)`
   height: 80px;
@@ -66,23 +66,28 @@ class Header extends Component {
         height="80px"
         alignItems="center"
         justifyContent="space-between">
-        <Column>
-          <Link exact to="/">
-            <Logo />
-          </Link>
-        </Column>
-        <Nav is="nav" display={['none', 'none', 'flex', 'flex']}>
-          <MenuLinks />
-        </Nav>
-        <Column display={['block', 'block', 'none', 'none']}>
-          <Hamburger isOpen={isMenuOpen} onClick={this.handleHamburgerClick} />
-        </Column>
-        <MobileNav
-          display={['flex', 'flex', 'none', 'none']}
-          isOpen={isMenuOpen}
-          px={theme.containerMargins}>
-          <MenuLinks onClick={this.handleLinkClick} mb={['32px', '72px']} />
-        </MobileNav>
+        <HideForPaths whitelist={false} paths={['/']}>
+          <Column>
+            <Link exact to="/">
+              <Logo />
+            </Link>
+          </Column>
+          <Nav is="nav" display={['none', 'none', 'flex', 'flex']}>
+            <MenuLinks />
+          </Nav>
+          <Column display={['block', 'block', 'none', 'none']}>
+            <Hamburger
+              isOpen={isMenuOpen}
+              onClick={this.handleHamburgerClick}
+            />
+          </Column>
+          <MobileNav
+            display={['flex', 'flex', 'none', 'none']}
+            isOpen={isMenuOpen}
+            px={theme.containerMargins}>
+            <MenuLinks onClick={this.handleLinkClick} mb={['32px', '72px']} />
+          </MobileNav>
+        </HideForPaths>
       </FlexHeader>
     );
   }

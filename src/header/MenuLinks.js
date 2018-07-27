@@ -2,14 +2,17 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import MenuLink from './MenuLink';
+import HideForPaths from '../shared/HideForPaths';
 
 const Anchor = MenuLink.withComponent('a');
 
-const MenuLinks = ({ theme, mb, onClick }) => (
+const MenuLinks = ({ theme, mb }) => (
   <Fragment>
-    <MenuLink mb={mb} fontSize={theme.menuFontSizes} to="/projects">
-      Projects
-    </MenuLink>
+    <HideForPaths paths={['/archives', '/archives/:id']} whitelist={false}>
+      <MenuLink mb={mb} fontSize={theme.menuFontSizes} to="/projects">
+        Projects
+      </MenuLink>
+    </HideForPaths>
     <MenuLink mb={mb} fontSize={theme.menuFontSizes} to="/about">
       About
     </MenuLink>
@@ -23,8 +26,7 @@ const MenuLinks = ({ theme, mb, onClick }) => (
 );
 
 MenuLinks.defaultProps = {
-  mb: null,
-  onClick: () => {}
+  mb: null
 };
 
 MenuLinks.propTypes = {
@@ -32,7 +34,6 @@ MenuLinks.propTypes = {
   mb: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string)
-  ]),
-  onClick: PropTypes.func
+  ])
 };
 export default withTheme(MenuLinks);
