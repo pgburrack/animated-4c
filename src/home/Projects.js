@@ -1,11 +1,11 @@
 import React from 'react';
 import leo from '../images/leo.png';
-import Archive from './Archive';
+import Project from './Project';
 
-const Archives = () => (
+const Projects = () => (
   <div>
-    <Archive
-      linkTo="/projects/1"
+    <Project
+      id="1"
       position="UI / UX Design"
       title="Our Cool Project Title"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -16,8 +16,8 @@ const Archives = () => (
       }}
     />
 
-    <Archive
-      linkTo="/projects/1"
+    <Project
+      id="1"
       position="UI / UX Design"
       title="Our Cool Project Title"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -28,8 +28,8 @@ const Archives = () => (
       }}
     />
 
-    <Archive
-      linkTo="/projects/1"
+    <Project
+      id="1"
       position="UI / UX Design"
       title="Our Cool Project Title"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -42,4 +42,4 @@ const Archives = () => (
   </div>
 );
 
-export default Archives;
+export default Projects;

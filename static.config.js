@@ -44,6 +44,21 @@ export default {
         path: '/archives'
       },
       {
+        path: '/archives/:id',
+        getData: () => ({
+          vertical: true,
+          id: '1',
+          position: 'UI / UX Design',
+          title: 'Our Cool Project Title',
+          desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d aliqua.',
+          img: {
+            alt: 'project image',
+            src: '/static/leo.1fe7a0da.png'
+          }
+        })
+      },
+      {
         path: '/projects',
         component: 'src/containers/Projects'
       },
