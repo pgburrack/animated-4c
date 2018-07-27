@@ -18,7 +18,6 @@ import NotFound from './containers/404';
 import Projects from './containers/Projects';
 import Project from './containers/Project';
 
-// The magic :)
 // const AnimatedRoutes = getContext({
 //   // We have to preserve the router context for each route
 //   // otherwise, a component may rerender with the wrong data
