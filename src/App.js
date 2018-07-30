@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 // import { NodeGroup } from 'react-move';
 // import { withContext, getContext } from 'recompose';
 // import PropTypes from 'prop-types';
+import Routes from 'react-static-routes';
 import { hot } from 'react-hot-loader';
 
 // import Routes from 'react-static-routes';
@@ -112,15 +113,8 @@ const App = () => (
       <Fragment>
         <Container>
           <Header />
-          {/* <Routes component={AnimatedRoutes} /> */}
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/archives" component={Home} />
-            <Route exact path="/archives/:id" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/projects" component={Projects} />
-            <Route exact path="/projects/:id" component={Project} />
-            <Route component={NotFound} />
+            <Routes />
           </Switch>
         </Container>
       </Fragment>
