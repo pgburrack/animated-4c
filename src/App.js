@@ -111,7 +111,7 @@ const App = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <Fragment>
-        <Container>
+        <Container maxWidth={theme.maxWidth}>
           <Header />
           <Switch>
             <Routes />

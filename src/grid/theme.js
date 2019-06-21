@@ -52,7 +52,8 @@ const containerMargins = [
   mediumMargin,
   largeMargin,
   xlargeMargin,
-  xxlargeMargin
+  xxlargeMargin,
+  'auto'
 ];
 
 const numOfCols = [
@@ -96,6 +97,8 @@ const zIndex = {
   menu: 1
 };
 
+const maxWidth = xxlargeBreakpoint - xxlargeMargin * 2;
+
 const theme = {
   breakpoints,
   colors: {
@@ -114,7 +117,8 @@ const theme = {
   colWidth,
   colWidthPer,
   menuFontSizes,
-  zIndex
+  zIndex,
+  maxWidth
 };
 
 export default theme;
